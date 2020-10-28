@@ -1,0 +1,29 @@
+type Query {
+
+    ping:String!
+    user(id:ID!):User!
+    users:[User!]!
+    
+}
+type Mutation {
+
+    newUser(user:UserInput!):User!
+    updateUser(user:UserInput!):User!
+    deleteUser(id:ID!):User!
+
+    
+    
+}
+input UserInput {
+    id:ID
+    name:String!
+    mail:String!
+    content:String!
+}
+
+type User {
+    id: ID!
+    name:String!
+    mail:String!
+    content:String!
+}
